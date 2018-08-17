@@ -88,4 +88,22 @@ module.exports = function(app) {
       console.log("this is the err:", err);
     }
   });
+
+  app.put("/dropoff/update", isAuthenticated, function(req, res) {
+    try {
+      db.DropOff.findOne({where: {id: id}}).then(function(result) {
+        let renData = [];
+        result.forEach(element => {
+          renData.push(element.dataValues);
+        });
+        console.log(renData);
+        res.render("update", {
+          values: renData,
+          status: "User Signed In"
+        });
+      });
+    } catch (err) {
+      console.log("this is the err:", err);
+    }
+  });
 };

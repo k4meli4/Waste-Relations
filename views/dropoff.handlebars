@@ -68,12 +68,12 @@
             <script type="text/javascript">
               function updateRequest(locationId) {
                 console.log("pressed update buttonnnnnnn")
-                
-                //$.ajax({
-                //  type: "PUT",
-                //  url: "/api/dropoff/update",
-               // //  data: {locationId: locationId}
-                //});
+                document.getElementById(locationID).updateRequest()
+                $.ajax({
+                 type: "PUT",
+                url: "/api/dropoff/update",
+                data: {locationId: locationId}
+                });
               };
             </script>
           </td>

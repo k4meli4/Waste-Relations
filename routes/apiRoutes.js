@@ -109,8 +109,10 @@ module.exports = function(app) {
     db.DropOff.destroy({ where: { id: req.body.locationId } });
     res.sendStatus(204);
   });
-  app.delete("/api/dropoff/update", function(req, res) {
-    // db.DropOff.destroy({where: {id: req.body.locationId}})
-    res.sendStatus(204);
+  app.put("/api/dropoff/update", function(req, res) {
+    const {id, organization, locality, postalCode, thoroughFare} = req.body
+    db.DropOff.update({organization, locality, postalCode, thoroughFare}, {where: {id: id}})
+    // db.DropOff.update({where: {id: req.body.locationId}})
+    .then(() => res.sendStatus(204).end());
   });
 };
