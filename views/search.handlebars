@@ -1,5 +1,6 @@
-<link rel="stylesheet" type="text/css" href="/css/login.css">
-<link rel="stylesheet" type="text/css" href="/css/result.css">
+{{!--
+<link rel="stylesheet" type="text/css" href="/css/login.css"> --}} {{!--
+<link rel="stylesheet" type="text/css" href="/css/result.css"> --}}
 <div>
   <img id="logoIcon" src="../img/logo-v2.gif" alt="Logo Icon" />
   <h3>What are you throwing out?</h3>
@@ -14,13 +15,14 @@
 <div class="mt3">
   {{!--
   <label class="db fw4 lh-copy f6" for="email-address">Search</label> --}}
-  <input class="pa2 input-reset ba bg-transparent w-100 measure" type="email" name="Search" id="searchBox" placeholder="Search">
+  <input class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="Search" id="searchBox"
+    placeholder="Search">
 </div>
 
 
 <div class="pa4">
   <div class="overflow-auto">
-    <table id= "searchTable" class="f6 w-100 mw8 center" cellspacing="0">
+    <table id="searchTable" class="f6 w-100 mw8 center" cellspacing="0">
       <thead>
         <tr class="stripe-dark">
           <th class="fw6 tl pa3 bg-white">Name</th>
@@ -59,5 +61,6 @@
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{{!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
 <script type="text/javascript" src="/js/search.js"></script>
